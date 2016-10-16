@@ -3569,9 +3569,7 @@
           "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.AspNetCore.Routing": "1.0.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
-          "Microsoft.NETCore.App": "1.0.1",
-          "dotnet-test-xunit": "2.2.0-preview2-build1029",
-          "xunit": "2.2.0-beta2-build3300"
+          "Microsoft.NETCore.App": "1.0.1"
         },
         "compile": {
           "netcoreapp1.0/CashRegister.dll": {}
