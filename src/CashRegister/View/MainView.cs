@@ -4,15 +4,15 @@ using CashRegister.Model.ItemModel;
 
 namespace CashRegister.View
 {
-    public class View
+    public class MainView
     {
         public IEnumerable<CategoryView> CategoryViews { get; }
-        public Model.ItemModel.Model Model { get; }
+        public MainModel MainModel { get; }
 
-        public View(Model.ItemModel.Model model)
+        public MainView(MainModel mainModel)
         {
-            Model = model;
-            CategoryViews = model.CategorieList
+            MainModel = mainModel;
+            CategoryViews = mainModel.CategorieList
                 .Select(category => new CategoryView(category));
         }
 
@@ -33,9 +33,9 @@ namespace CashRegister.View
         public string BuyTwoGetOneFreeSummarysWithSpliter =>
             BuyTwoGetOneFreeSummarys + Splitter;
 
-        public string Total => $"总计:{Model.Total}(元)\n";
+        public string Total => $"总计:{MainModel.Total}(元)\n";
 
-        public string TotalSaved => Model.TotalSaved > 0 ? $"节省:{Model.TotalSaved}(元)\n" : string.Empty;
+        public string TotalSaved => MainModel.TotalSaved > 0 ? $"节省:{MainModel.TotalSaved}(元)\n" : string.Empty;
 
         public string Render => 
             Header + Categories + Splitter +

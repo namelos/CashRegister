@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace CashRegister.Model.ItemModel
 {
-    public class Model
+    public class MainModel
     {
         public IEnumerable<Category> CategorieList;
 
-        public Model(IEnumerable<ItemDto> items, Dictionary<string, ItemConfig> configs)
+        public MainModel(IEnumerable<ItemDto> items, Dictionary<string, ItemConfig> configs)
         {
             CategorieList = items.Select(item =>
             {

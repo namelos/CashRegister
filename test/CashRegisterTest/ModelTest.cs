@@ -8,11 +8,11 @@ namespace CashRegisterTest
     {
         public ModelTest()
         {
-            Model = new Model(
+            MainModel = new MainModel(
                 GivenItemDto.ItemDtos, 
                 GivenItemConfig.ConfigList);
         }
 
-        public Model Model { get; }
+        public MainModel MainModel { get; }
     }
 }

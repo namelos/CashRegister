@@ -4,5 +4,6 @@ namespace CashRegister.Model
 {
     public interface IItemConfigRepository
     {
+        Dictionary<string, ItemConfig> GetItemConfigs();
     }
 }
