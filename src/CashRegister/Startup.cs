@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CashRegister.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace CashRegister
 {
     public class Startup
     {
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app) => 
+            app.UseMvc();
+
+        public void ConfigureServices(IServiceCollection services)
         {
-            app.Run(context => context.Response.WriteAsync("server started"));
+            services.AddSingleton<IItemConfigRepository, ItemConfigRepository>();
+            services.AddMvc();
         }
     }
 }
